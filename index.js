@@ -232,7 +232,6 @@ function generatedTimeEveryAfterEveryOneMinTRX() {
         ? 60 - currentTime.getSeconds()
         : currentTime.getSeconds();
     io.emit("onemintrx", timeToSend);
-    console.log(timeToSend);
     if (timeToSend === 0) io.emit("result", result);
     if (timeToSend === 58) {
       const query_data = `UPDATE tr41_trx_result  SET tr41_status=2 WHERE tr41_type=1;`;
